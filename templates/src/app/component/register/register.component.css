@@ -1,0 +1,22 @@
+.background-section {
+    background-image: url(../../../assets/img/img-login-portada3.jpg);
+    /* Cambia 'ruta/a/la/imagen.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center;
+    height: 100vh;
+
+    /* Centra la imagen */
+}
+
+/* Estilo para el placeholder */
+.input::placeholder {
+    color: rgba(48, 46, 46, 0.7);
+    /* Cambia el color y la opacidad según lo necesites */
+}
+
+.bowlby-one sc-regular {
+    font-family: "Bowlby One SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

@@ -1,0 +1,30 @@
+.background-section {
+    background-image: url(../../../assets/img/img-login-portada3.jpg);
+    /* Cambia 'ruta/a/la/imagen.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center;
+    height: 100vh;
+
+    /* Centra la imagen */
+}
+
+.transparent-input {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Color de fondo transparente */
+    border: 1px solid #ced4da;
+    /* Borde del campo de entrada */
+    color: #000;
+    /* Color del texto */
+}
+
+.transparent-input::placeholder {
+    color: #555;
+    /* Color del texto de marcador de posición */
+}
+
+/* Estilo para el placeholder */
+.input::placeholder {
+    color: rgba(48, 46, 46, 0.7);
+    /* Cambia el color y la opacidad según lo necesites */
+}
