@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StudentsService } from 'src/app/services/students.service';
 declare var bootstrap: any; // Declarar Bootstrap para que Angular lo reconozca
 
 @Component({
@@ -7,12 +8,7 @@ declare var bootstrap: any; // Declarar Bootstrap para que Angular lo reconozca
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  alumnos: any[] = []; // Array para almacenar los datos de los alumnos
 
   openModal() {
     const modelDiv = document.getElementById('myModal');
@@ -21,15 +17,12 @@ export class UserComponent implements OnInit {
     }
   }
 
-
   closeModal() {
     const modelDiv = document.getElementById('myModal');
     if (modelDiv != null) {
       modelDiv.style.display = 'none';
     }
   }
-
-
 
   openPDFModal() {
     // Ruta del PDF que deseas mostrar en el modal
@@ -45,5 +38,20 @@ export class UserComponent implements OnInit {
     const pdfModal = new bootstrap.Modal(document.getElementById('pdfModal'));
     pdfModal.show();
   }
+
+
+  obtenerAlumnos() {
+    this._studentServices.getUsers().subscribe(data => {
+      this.alumnos = data;
+      console.log(data);
+    })
+  }
+
+  constructor(private _studentServices: StudentsService) { }
+
+  ngOnInit(): void {
+    this.obtenerAlumnos();
+  }
+
 
 }
